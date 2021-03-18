@@ -1,0 +1,97 @@
+body {
+    background-color: #add8e6;
+  }
+header {
+    background-color: #e6bbad;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+nav{
+    float: left;
+    width: 30%;
+    height: 100px;
+    background: #e6bbad;
+    padding: 20px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  #spec-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #db9d89;
+  }
+  
+  #spec-li {
+    float: left;
+  }
+  
+  #spec-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #e6bbad;
+  }
+article {
+    float: right;
+    padding: 20px;
+    width: 70%;
+    height: 100px;
+    color: white;
+    
+  }
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  h2 {
+    color: black;
+    text-align: center;
+  }
+  #profile-header {
+    color: black;
+    font-size:20px;
+  }
+  p {
+    font-family: verdana;
+    font-size: 15px;
+  }
+  #profile-pic{
+    width:30%-40px;
+    height:150px;
+  }
+  footer {
+    background-color: #e6bbad;
+    padding: 10px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 10px;
+  }
+  #cv-header{
+    color: white;
+    text-align: left;
+    font-size: 20px;
+  }
+  #cv-text{
+    color: white;
+    text-align: left;
+    font-size: 15px;
+  }
