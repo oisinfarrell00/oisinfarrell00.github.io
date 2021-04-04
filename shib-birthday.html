@@ -1,9 +1,42 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body style = "background-color: #38df7c;">
+<!-- JavaScript -->
+<script type="text/javascript">
+    function picture(){ 
+        var pic = "avo.jpg"
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+        document.getElementById('bigpic').style.display='block';
 
-<h1>Happy Birthday Shibby!!</h1>
+        }
+</script>
+<!-- CSS -->
+<style>
+    .pic {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .button{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        }
+</style>
+<h1 style="font-size:300%; text-align:center; color: #18964B; border-color: white;">Happy Birthday Shibby!!</h1>
 <p>My first paragraph.</p>
-
+<img id="bigpic" src="avo.jpg" style="display:none;" class="pic" />
+<button onclick="picture()" class="button">Click me to reveal your birthday pun!</button>
 </body>
 </html>
