@@ -3,6 +3,24 @@
 <body style = "background-color: #38df7c;">
 <!-- JavaScript -->
 <script type="text/javascript">
+    function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
     function picture(){ 
         var pic = "avo.jpg"
         document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
@@ -10,6 +28,11 @@
         document.getElementById('test').style.display='none';
 
         }
+    function presnts(){
+        var present_arr = [10];
+        var rand_arr = shuffle(present_arr);
+        
+    }
 </script>
 <!-- CSS -->
 <style>
@@ -46,7 +69,8 @@
 <img id="bigpic" src="avo.jpg" style="display:none;" class="pic" />
 <button id="test" onclick="picture()" class="button">Click me to reveal your birthday pun!</button>
 <div class="w3-container">
-    <h2 style="font-size:300%; text-align:center; color: #18964B; border-color: white;">Presents time</h2>
+    <h2 style="font-size:300%; text-align:center; color: #18964B; border-color: white;">Presents time!</h2>
+    <button class="button"> Click me to get your next present!</button>
 </div>
 </body>
 </html>
