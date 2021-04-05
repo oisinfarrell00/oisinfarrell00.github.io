@@ -7,36 +7,46 @@
         var pic = "avo.jpg"
         document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
         document.getElementById('bigpic').style.display='block';
+        document.getElementById('test').style.display='none';
 
         }
 </script>
 <!-- CSS -->
 <style>
+    
     .pic {
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        border-radius: 8px;
+        width: 250px;
+        height: 250px;
+        
     }
     .button{
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        margin: 10px;
+        position: relative;
+        left: 35%;
         background-color: #4CAF50; /* Green */
         border: none;
         color: white;
+        border-radius: 8px;
         padding: 15px 32px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 24px;
         }
+    .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    }
 </style>
 <h1 style="font-size:300%; text-align:center; color: #18964B; border-color: white;">Happy Birthday Shibby!!</h1>
-<p>My first paragraph.</p>
+
 <img id="bigpic" src="avo.jpg" style="display:none;" class="pic" />
-<button onclick="picture()" class="button">Click me to reveal your birthday pun!</button>
+<button id="test" onclick="picture()" class="button">Click me to reveal your birthday pun!</button>
+<div class="w3-container">
+    <h2 style="font-size:300%; text-align:center; color: #18964B; border-color: white;">Presents time</h2>
+</div>
 </body>
 </html>
