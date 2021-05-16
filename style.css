@@ -76,6 +76,10 @@ section::after {
     width:30%-40px;
     height:150px;
   }
+  #header-pic{
+    width:100%;
+    height:70%;
+  }
   footer {
     background-color: #e6bbad;
     padding: 10px;
