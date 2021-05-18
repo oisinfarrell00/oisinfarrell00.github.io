@@ -2,18 +2,20 @@ body {
     overflow-y : auto; 
     background-color: white;
   }
-header {
-    
+.header {
+  /*position: fixed;*/
+  background-color: #add8e6;
+  vertical-align: middle;
+  height: 40px;
+  overflow: hidden;
+  
+  
 }
 
 #spec-ul {
-  height: 40px;
   list-style-type: none;
-  vertical-align: middle;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #add8e6;
 }
 
 #spec-li {
@@ -145,4 +147,14 @@ nav{
 nav ul {
   list-style-type: none;
   padding: 0;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
 }
