@@ -2,15 +2,34 @@ body {
     overflow-y : auto; 
     background-color: white;
   }
+
+.navbar {
+overflow: hidden;
+background-color: #333;
+position: fixed; /* Set the navbar to fixed position */
+top: 0; /* Position the navbar at the top of the page */
+width: 100%; /* Full width */
+}
+  /* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
   
 .header {
   background-color: #add8e6;
   vertical-align: middle;
   height: 40px;
   overflow: hidden;
-  
-  
-  
+  z-index: 100;
 }
 
 #spec-ul {
@@ -155,6 +174,23 @@ nav ul {
   width: 100%;
 }
 
+.content {
+  padding: 16px;
+}
+
 .sticky + .content {
   padding-top: 102px;
+}
+
+/* For the information boxes, having them alternate grey and white*/
+#content-box{
+  /*background-color: #d4d3d1;*/
+  position:relative; 
+  /*left:20px; <-- not sure if I want indent yet*/
+  
+}
+#content-box-text{
+  position:relative; 
+  left:40px;
+  font-size: 20px;
 }
