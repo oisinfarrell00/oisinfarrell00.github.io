@@ -145,20 +145,25 @@ frontpage ul li {
   list-style-type: disc;
 }
 
-.block {
-  margin-top: 15%;
-  display: block;
-  width: 100%;
-  border: none;
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 28px;
+
+
+.btn-group .button {
+  background-color: white; /* Green */
+  margin-top: 10px;
+  border-radius: 12px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  text-align: center;
+  width: 100%;
+  display: block;
 }
 
-.block:hover {
-  background-color: #ddd;
-  color: black;
+
+
+.btn-group .button:hover {
+  background-color: #DCDCDC;
 }
+
