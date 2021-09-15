@@ -17,6 +17,14 @@
 figcaption{
     text-align: center;
 }
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
 </style>
 <h1>Trocaire Fall Armyworm App</h1>
 <p>During second year I participated in a software engineering project. 
@@ -33,18 +41,33 @@ figcaption{
     Trocaire wanted an app that could be used to gain 
     information on Fall Armyworm attacks, both how to prevent them and how to react to them.
     They also wanted a feature that would allow farmers to report infestations so that an NGO's 
-    could go out and help the farmers. We used Google's map API to implement this feature.
+    could go out and help the farmers. 
 
 </p>
-<div style="text-align:center">
-    <video width="320" height="240" controls>
-        <source src="Media1.mp4" type="video/mp4">
-    </video>
-</div>
+<div class="row">
+    <div class="column">
+        <img src="trocaire1.PNG" alt="accuracy" class="center">
+        <figcaption>Figure 1: Map Feature.</figcaption>
+    </div>
+    <div class="column">
+        <img src="trocaire2.PNG" alt="accuracy" class="center">
+        <figcaption>Figure 2: Information Feature.</figcaption>
+    </div>
+    <div class="column">
+        <img src="trocaire3.PNG" alt="accuracy" class="center">
+        <figcaption>Figure 3: Report Feature.</figcaption>
+    </div>
+  </div>
 
 <br><br>
 <p2>
-    Above is a video of the final app. We implemented all the features that Trocaire wanted. 
+    Above are some photos of the final app which contained all the features that Trocaire wanted.
+    In figure 1 you can see the map feature. This allows users to pin point their exact location on the map and makes it 
+    much easier for help to find them. We used Google's map API to implement this feature. 
+    Figure 2 shows the information feature, where farmers can gain valuable insight on how to prevent infestations and what 
+    to do in the unfortunate event of one. 
+    Figure 3 shows the report feature where farmers can report an infestation and get help  from an NGO.
+    <br><br>
     This project thaught me a lot about working in teams and also thinking outside the box. 
     For example, the target audience for this app were farmers in Africa and because of this we 
     had to consider what type of phones and internet access they would have and adjusted accordingly.
