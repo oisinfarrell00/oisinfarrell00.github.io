@@ -1,13 +1,13 @@
-import { motion } from 'framer-motion';
-import { ChevronDown } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { GradientText } from '../animations/GradientText';
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { Button } from "../ui/Button";
+import { GradientText } from "../animations/GradientText";
 
 export function Hero() {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -51,7 +51,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 mb-4"
           >
-            Computer Science Student & Developer
+            Builder of awesome shit.
           </motion.p>
 
           <motion.p
@@ -60,8 +60,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto"
           >
-            Building innovative solutions with code. Passionate about AI, web development,
-            and creating meaningful digital experiences.
+            Passioate about Irish history, economics, and tech.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -73,14 +72,14 @@ export function Hero() {
           >
             <Button
               variant="primary"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection("projects")}
               className="w-full sm:w-auto"
             >
               View My Work
             </Button>
             <Button
               variant="secondary"
-              onClick={() => scrollToSection('contact')}
+              onClick={() => scrollToSection("contact")}
               className="w-full sm:w-auto"
             >
               Get In Touch
@@ -98,7 +97,7 @@ export function Hero() {
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
               className="text-slate-400 dark:text-slate-500 cursor-pointer"
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection("about")}
             >
               <ChevronDown size={32} />
             </motion.div>

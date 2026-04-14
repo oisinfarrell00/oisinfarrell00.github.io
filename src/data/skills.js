@@ -30,7 +30,7 @@ export const bio = {
   email: "contact@oisinfarrell.com", // Placeholder - update with real email
   github: "https://github.com/oisinfarrell00",
   linkedin: "https://www.linkedin.com/in/oisin-farrell/", // Placeholder - update with real LinkedIn
-  description: `I am a computer science student at Trinity College Dublin (TCD). I have just completed my Erasmus year at the Royal Institute of Technology (KTH) in Stockholm, Sweden. I have an interest in all aspects of computer science and hope to pursue a career in this field after graduation.`,
+  description: `Software developer primarily focused on web development (particularyly backend and mainly versed in Java).`,
 
   education: [
     {
@@ -69,35 +69,46 @@ export const bio = {
 
   experience: [
     {
-      role: "Maths Tutor",
-      company: "JustMaths.ie",
+      role: "Software Developer",
+      company: "Brightflag",
       location: "Dublin, Ireland",
-      period: "2018 - Present",
+      period: "February 2026 - Present",
       description:
-        "Teaching mathematics to junior and leaving cert students, developing communication and teaching skills.",
+        "Honestly, a bit of everything. I spend pretty much everyday building. What I build varies day to day. Im usually keeping clients happy or building internal toolds to help the BAs",
     },
     {
-      role: "Camp Counsellor",
-      company: "YMCA Camp Lakewood",
-      location: "Missouri, United States",
-      period: "Summer 2019",
-      description:
-        "Teaching computer skills to children aged 7-17, leading activities and developing leadership skills.",
+      role: "Technology Consulting Intern",
+      company: "Ernst & Young (EY)",
+      location: "Dublin, Ireland",
+      period: "October 2023 - February 2026",
+      description: "Cog in the big corporate machine.",
     },
   ],
 
   interests: [
     {
-      title: "Sports",
+      title: "Gardening",
       description:
-        "I played football for over ten years. In this time I captained my team to three league titles. Playing football has taught me the value of team work and communication as they are the key components to a successful football team.",
-      icon: "⚽",
+        "I successfully grew a tomato plant once. It was a proud moment. I have since been trying to replicate that success with other plants, but no luck so far.",
+      icon: "🌱",
     },
     {
-      title: "Travelling",
+      title: "Cooking",
       description:
-        "In 2018 I travelled to Australia for the summer to experience what the Land Down Under had to offer. I continued to have a passion for travelling and exercised this love by working in America for a summer. I then went on to do a year abroad in Sweden where I immersed myself in Swedish culture. This included a lot of Fika. (Fika is basically tea and some baked goods.) Travelling has allowed me to develop a lot as a person and has greatly diversified my professional network.",
-      icon: "✈️",
+        "Cooking is the pre-requsite to eating, and boy do I love to eat. If the cost of living wasnt so hight I would go out more. Until then I will be my own chef.",
+      icon: "🍳",
+    },
+    {
+      title: "Irish History",
+      description:
+        "I have a deep interest in Irish history, particularly the events leading up to and following the Easter Rising. I find the stories of the people involved fascinating and inspiring.",
+      icon: "🇮🇪",
+    },
+    {
+      title: "Economics",
+      description:
+        "I have a keen interest in economics and its applications to real-world scenarios. I enjoy reading about market trends and economic policies.",
+      icon: "📊",
     },
   ],
 };
