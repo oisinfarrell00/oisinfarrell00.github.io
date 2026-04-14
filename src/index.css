@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300;
+  }
+
+  h1, h2, h3 {
+    @apply font-bold;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-pink-500 bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white/70 dark:bg-slate-800/70 backdrop-blur-md border border-slate-200 dark:border-slate-700 rounded-2xl;
+  }
+
+  .gradient-button {
+    @apply bg-gradient-to-r from-primary-light to-purple-600 dark:from-primary-dark dark:to-pink-500 text-white font-semibold px-8 py-3 rounded-full hover:shadow-2xl hover:scale-105 transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease infinite;
+  }
+}
