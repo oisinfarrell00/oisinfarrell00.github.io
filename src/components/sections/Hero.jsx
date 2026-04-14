@@ -41,7 +41,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            <GradientText>Oisin Farrell</GradientText>
+            <GradientText>Oisín Farrell</GradientText>
           </motion.h1>
 
           {/* Subtitle */}
