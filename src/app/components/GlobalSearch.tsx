@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
 import { Search, Command } from "lucide-react";
+import { SearchItem } from "./search/SearchItem";
+import { SearchFooter } from "./search/SearchFooter";
 
 export function GlobalSearch() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const recentSearches = [
+    { title: "Architecture patterns", category: "Documentation", icon: "DOC" },
+    { title: "Economic theory notes", category: "Essays", icon: "ESS" },
+    { title: "React optimization", category: "Projects", icon: "PRJ" }
+  ];
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -63,37 +71,12 @@ export function GlobalSearch() {
                 <div className="text-[10px] text-muted-foreground font-mono uppercase tracking-wider">Recent Searches</div>
               </div>
 
-              {[
-                { title: "Architecture patterns", category: "Documentation", icon: "DOC" },
-                { title: "Economic theory notes", category: "Essays", icon: "ESS" },
-                { title: "React optimization", category: "Projects", icon: "PRJ" }
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="group flex items-center gap-3 px-3 py-3 hover:bg-accent/10 hover:border-l-2 hover:border-accent rounded cursor-pointer transition-all"
-                >
-                  <div className="w-8 h-8 border border-border rounded flex items-center justify-center text-[10px] font-mono text-muted-foreground group-hover:border-accent group-hover:text-accent transition-all flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm group-hover:text-accent transition-colors">{item.title}</div>
-                    <div className="text-xs text-muted-foreground font-mono">{item.category}</div>
-                  </div>
-                  <div className="text-xs font-mono text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity">
-                    ↵
-                  </div>
-                </div>
+              {recentSearches.map((item, idx) => (
+                <SearchItem key={idx} title={item.title} category={item.category} icon={item.icon} />
               ))}
             </div>
 
-            <div className="flex items-center justify-between px-5 py-3 border-t border-border bg-muted/20">
-              <div className="flex items-center gap-4 text-xs text-muted-foreground font-mono">
-                <span>↑↓ Navigate</span>
-                <span>↵ Select</span>
-                <span>ESC Close</span>
-              </div>
-              <div className="text-xs text-muted-foreground">Type to search...</div>
-            </div>
+            <SearchFooter />
           </div>
         </div>
       )}

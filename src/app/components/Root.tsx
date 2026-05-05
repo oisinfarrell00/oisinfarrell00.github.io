@@ -1,4 +1,4 @@
-import { Outlet, Link, useLocation } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { GlobalSearch } from "./GlobalSearch";
 import { SystemStatus } from "./SystemStatus";
 
