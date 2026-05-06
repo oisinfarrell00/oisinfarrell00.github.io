@@ -1,5 +1,4 @@
 import { Outlet, useLocation } from "react-router";
-import { GlobalSearch } from "./GlobalSearch";
 import { SystemStatus } from "./SystemStatus";
 
 export function Root() {
@@ -40,7 +39,6 @@ export function Root() {
           <div className="flex items-center gap-3">
             <SystemStatus />
             <div className="w-px h-6 bg-border" />
-            <GlobalSearch />
           </div>
         </div>
       </header>

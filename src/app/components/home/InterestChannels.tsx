@@ -1,37 +1,19 @@
 import { Link } from "react-router";
 import { ArrowRight, Calendar } from "lucide-react";
+import { getInterests } from "../../data/switchBoardInterests";
+import { getEssaysByCategory } from "../../data/essayRegistry";
 
 export function InterestChannels() {
-  const interests = [
+  const interests = getInterests().map(interest => (
     {
-      title: "Economic Theory",
-      slug: "economic-theory",
-      latestEntry: "Game Theory in Market Design",
-      date: "Apr 18, 2026",
-      description: "Exploring mechanism design and auction theory"
-    },
-    {
-      title: "Political Analysis",
-      slug: "political-analysis",
-      latestEntry: "Public Choice Economics",
-      date: "Apr 15, 2026",
-      description: "Intersection of economics and political systems"
-    },
-    {
-      title: "Reading Archive",
-      slug: "reading-archive",
-      latestEntry: "The Idea Factory - Jon Gertner",
-      date: "Apr 12, 2026",
-      description: "Curated notes and reflections from technical literature"
-    },
-    {
-      title: "Projects",
-      slug: "curated-media",
-      latestEntry: "Systems Thinking Podcast #47",
-      date: "Apr 10, 2026",
-      description: "Lectures, talks, and long-form interviews"
+      title: interest.title,
+      slug: interest.slug,
+      latestEntry: getEssaysByCategory(interest.key)?.[0]?.title,
+      date: new Date(getEssaysByCategory(interest.key)?.[0]?.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
+      description: interest.description,
+      status: interest.status
     }
-  ];
+  ));
 
   return (
     <section>
@@ -41,7 +23,7 @@ export function InterestChannels() {
           <h2 className="text-2xl font-mono">SWITCHBOARD_INTERESTS</h2>
         </div>
         <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent" />
-        <div className="text-xs font-mono text-muted-foreground">4 ACTIVE CHANNELS</div>
+        <div className="text-xs font-mono text-muted-foreground">{interests.length} ACTIVE CHANNELS</div>
       </div>
 
       <div className="grid grid-cols-2 gap-6">

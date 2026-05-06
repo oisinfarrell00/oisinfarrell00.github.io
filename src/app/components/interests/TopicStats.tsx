@@ -1,9 +1,10 @@
 interface TopicStatsProps {
   entryCount: number;
   lastUpdated: string;
+  status?: string;
 }
 
-export function TopicStats({ entryCount, lastUpdated }: TopicStatsProps) {
+export function TopicStats({ entryCount, lastUpdated, status }: TopicStatsProps) {
   return (
     <div className="grid grid-cols-3 gap-6 mt-10">
       <div className="border border-border rounded-lg p-6 bg-card">
@@ -21,7 +22,7 @@ export function TopicStats({ entryCount, lastUpdated }: TopicStatsProps) {
         <div className="text-xs text-accent font-mono mb-2">STATUS</div>
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-xl">Active Research</span>
+          <span className="text-xl">{status??""}</span>
         </div>
       </div>
     </div>

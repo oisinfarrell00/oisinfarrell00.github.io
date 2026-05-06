@@ -1,13 +1,13 @@
 interface ChannelHealthProps {
-  entries: Array<{ status: string }>;
+  entries: Array<{ status: string }>, totalEntries?: number, numEntriesForCategory?: number;
 }
 
-export function ChannelHealth({ entries }: ChannelHealthProps) {
-  const publishedCount = entries.filter(
+export function ChannelHealth({ entries, totalEntries, numEntriesForCategory }: ChannelHealthProps) {
+  const publishedCount = entries?.filter(
     (e: any) => e.status === "Published" || e.status === "Complete" || e.status === "Reviewed"
   ).length;
 
-  const draftCount = entries.filter((e: any) => e.status === "Draft").length;
+  const draftCount = entries?.filter((e: any) => e.status === "Draft").length;
 
   return (
     <div className="mt-16 grid grid-cols-2 gap-6">
@@ -32,9 +32,9 @@ export function ChannelHealth({ entries }: ChannelHealthProps) {
             <span className="text-sm text-muted-foreground">Activity Level</span>
             <div className="flex items-center gap-2">
               <div className="w-20 h-1.5 bg-muted rounded-full overflow-hidden">
-                <div className="h-full bg-accent rounded-full" style={{ width: '85%' }} />
+                <div className="h-full bg-accent rounded-full" style={{ width: `${Math.round(((numEntriesForCategory ?? 0) / (totalEntries || 1)) * 100)}%` }} />
               </div>
-              <span className="text-xs font-mono text-accent">85%</span>
+              <span className="text-xs font-mono text-accent">{Math.round(((numEntriesForCategory ?? 0) / (totalEntries || 1)) * 100)}%</span>
             </div>
           </div>
           <div className="flex items-center justify-between">

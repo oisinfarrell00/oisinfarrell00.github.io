@@ -6,13 +6,33 @@ interface Section {
   title: string;
 }
 
+interface EssayMetadata {
+  title: string;
+  date: string;
+  type: string;
+  status: string;
+  category: string;
+  wordCount: number;
+  readTime: number;
+}
+
 interface EssaySidebarProps {
   sections: Section[];
   activeSection: string;
   onSectionClick: (sectionId: string) => void;
+  metadata?: EssayMetadata;
 }
 
-export function EssaySidebar({ sections, activeSection, onSectionClick }: EssaySidebarProps) {
+export function EssaySidebar({ sections, activeSection, onSectionClick, metadata }: EssaySidebarProps) {
+  // Default values if no metadata provided
+  const title = metadata?.title || "Market Microstructure and Liquidity Provision";
+  const date = metadata?.date || "Apr 24, 2026";
+  const type = metadata?.type || "Essay";
+  const readTime = metadata?.readTime || 0;
+  const category = metadata?.category || "Economic Theory";
+  const status = metadata?.status || "Published";
+  const wordCount = metadata?.wordCount || 0;
+
   return (
     <aside className="w-80 border-r border-border sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto bg-muted/20">
       <div className="p-8">
@@ -27,15 +47,13 @@ export function EssaySidebar({ sections, activeSection, onSectionClick }: EssayS
         <div className="mb-10 pb-8 border-b border-border">
           <div className="flex items-center gap-2 mb-3">
             <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-            <div className="text-[10px] text-accent font-mono uppercase tracking-wider">Document Type: Essay</div>
+            <div className="text-[10px] text-accent font-mono uppercase tracking-wider">Document Type: {type}</div>
           </div>
-          <h2 className="text-xl mb-3 leading-tight">Market Microstructure and Liquidity Provision</h2>
+          <h2 className="text-xl mb-3 leading-tight">{title}</h2>
           <div className="flex items-center gap-3 text-xs text-muted-foreground font-mono">
-            <span>Apr 24, 2026</span>
+            <span>{date}</span>
             <span>·</span>
-            <span>18 min</span>
-            <span>·</span>
-            <span className="text-accent">v2.1.0</span>
+            <span>{readTime} min</span>
           </div>
         </div>
 
@@ -71,22 +89,26 @@ export function EssaySidebar({ sections, activeSection, onSectionClick }: EssayS
           <div className="space-y-3">
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Category</span>
-              <span className="px-2 py-0.5 bg-accent/10 text-accent rounded text-xs font-mono">Economic Theory</span>
+              <span className="px-2 py-0.5 bg-accent/10 text-accent rounded text-xs font-mono">{category}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Status</span>
               <div className="flex items-center gap-1.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500" />
-                <span className="text-xs font-mono">Published</span>
+                <div className={`w-1.5 h-1.5 rounded-full ${
+                  status === 'Published' || status === 'Complete' || status === 'Reviewed'
+                    ? 'bg-green-500'
+                    : 'bg-yellow-500'
+                }`} />
+                <span className="text-xs font-mono">{status}</span>
               </div>
             </div>
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Read Time</span>
-              <span className="font-mono text-xs">~18 minutes</span>
+              <span className="font-mono text-xs">~{readTime} {readTime === 1 ? 'minute' : 'minutes'}</span>
             </div>
             <div className="flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Word Count</span>
-              <span className="font-mono text-xs">3,247</span>
+              <span className="font-mono text-xs">{wordCount.toLocaleString()}</span>
             </div>
           </div>
         </div>
