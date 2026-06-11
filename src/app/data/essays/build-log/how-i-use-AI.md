@@ -17,16 +17,12 @@ I don't let it run on autopilot. Instead, I treat it as a highly capable assista
 
 Here is the exact playbook of how I use AI for learning, development, and automation.
 
----
-
 # Accelerated Learning & Documentation Decoding
 
 When I want to explore a new topic, tool, or framework, AI is my first port of call. Traditional documentation is often written in a dense, academic, or overly technical language that makes finding a starting point difficult.
 
 - **Foundation Building:** I use AI to strip away the jargon and give me a simplified, plain-English conceptual foundation first.
 - **Active Dialogue:** Unlike static documentation, I can treat the AI as a conversational partner. If there’s a gap in my understanding, I can ask for instant clarification, challenge its explanations, and ask follow-up questions until it clicks.
-
----
 
 # The Code Playbook: Snippets Over Systems
 
