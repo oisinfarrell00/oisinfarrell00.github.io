@@ -8,18 +8,19 @@ interface Interest {
 
 let interests: Interest[] = [
     {
-      title: "Economic Theory",
-      description: "My attempt to understand the world through the lens of economics, game theory, and mechanism design",
-      key: "economic-theory",
-      slug: "economic-theory",
+      title: "The Arena",
+      description: "My attempt to understand the world through the lens of economics, politics, and worldy systems",
+      key: "the-arena",
+      slug: "the-arena",
       status: "Actively Learning"
     },
-    // {
-    //   title: "Political Analysis",
-    //   description: "My very limited take on the complicated but fascinating world of politics",
-    //   key: "political-analysis",
-    //   slug: "political-analysis",
-    // },
+    {
+      title: "Friction & Flow",
+      description: "My thoughts on productivity, creativity, and the art of getting things done",
+      key: "friction-and-flow",
+      slug: "friction-and-flow",
+      status: "Actively Trying"
+    },
     {
       title: "Reading Archive",
       description: "A collection of books and articles I've read and want to share",
@@ -27,12 +28,13 @@ let interests: Interest[] = [
       slug: "reading-archive",
       status: "Actively Reading"
     },
-    // {
-    //   title: "Projects",
-    //   description: "A collection of projects I'm working on",
-    //   key: "projects",
-    //   slug: "projects",
-    // }
+    {
+      title: "Build Log",
+      description: "Anything related to the things I am builing, have built, or will pretent to",
+      key: "build-log",
+      slug: "build-log",
+      status: "Actively Working"
+    }
   ];
 
 

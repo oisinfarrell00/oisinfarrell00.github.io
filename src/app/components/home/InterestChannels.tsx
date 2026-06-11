@@ -39,10 +39,14 @@ export function InterestChannels() {
             <div className="relative p-8">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 border border-border rounded flex items-center justify-center font-mono text-sm text-accent group-hover:border-accent group-hover:bg-accent/10 transition-all">
+                  <div className="w-20 h-20 border border-border rounded flex items-center justify-center font-mono text-sm text-accent group-hover:border-accent group-hover:bg-accent/10 transition-all">
                     {String(idx + 1).padStart(2, '0')}
                   </div>
-                  <h3 className="text-xl group-hover:text-accent transition-colors">{interest.title}</h3>
+                  <div className="flex flex-col">
+                    <h3 className="text-xl group-hover:text-accent transition-colors">{interest.title}</h3>
+                    <p className="text-xs text-muted-foreground mt-4 leading-relaxed">{interest.description}</p>
+                  </div>
+                  
                 </div>
                 <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
               </div>
@@ -65,7 +69,7 @@ export function InterestChannels() {
                 </div>
               </div>
 
-              <p className="text-xs text-muted-foreground mt-4 leading-relaxed">{interest.description}</p>
+              {/* <p className="text-xs text-muted-foreground mt-4 leading-relaxed">{interest.description}</p> */}
             </div>
           </Link>
         ))}
