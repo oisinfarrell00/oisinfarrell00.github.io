@@ -11,7 +11,7 @@ excerpt: How I use AI
 
 # My AI Playbook: How I Actually Use Artificial Intelligence
 
-There is a lot of hype surrounding AI, but as a builder, the only thing that matters is utility. Over the last couple of years, I’ve moved past the novelty phase and integrated AI into my daily workflow as a force multiplier.
+There is a lot of hype surrounding AI, but as a builder, the only thing that matters is utility. Over the last couple of years, I’ve moved past the novelty phase and integrated AI into my daily workflow as a force multiplier. AI has really helped me move from the planning phase and allowed me to bring my projects to life. Spending hours on low level, repeatable tasks is no longer the bottleneck. This has allowed me to focus on building and high level decisions. I am no longer a small cog in the machine that simply takes orders. I can now focus on things like UX/UI and this has really increased my drive to build.
 
 I don't let it run on autopilot. Instead, I treat it as a highly capable assistant that requires clear guardrails, strict boundaries, and human oversight.
 
@@ -66,3 +66,7 @@ In my day job, I’ve taken automation a step further by writing custom "skill f
 - **PR Management:** Automatically raising pull requests or running pre-compliance audits on existing PRs.
 
 The trick to making these autonomous workflows successful is **narrow scoping**. Each skill runs through fixed, repeatable steps and is explicitly programmed to pause and ask for human intervention the second it encounters ambiguity. This eliminates guesswork and ensures consistently high-quality output.
+
+# Senior Dev Mentor
+
+With AI I am able to ask more questions and explore things more indepedendently. This means I am not wasting the time of senior developers (as much) and can learn a lot more for myself. Of course, I am still constantly in contact with senior members of the team as there are things AI cannot help with but now these conversations are much more impactful. They now center around much more pressing issues such as hosting, logging, caching, things that arent easily available to AI.
