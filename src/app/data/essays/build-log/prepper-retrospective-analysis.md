@@ -15,7 +15,7 @@ A retrospective on ~2.5 years, 245 commits, and 70 merged PRs of a meal-planning
 
 ---
 
-# 1. The idea, and bringing it to life
+# The idea, and bringing it to life
 
 Meal planning is a small, boring problem that costs a surprising amount of mental energy. You plan a week, forget what you planned by Wednesday, lose the shopping list, re-decide the same meals you already decided, and end up throwing out half a bag of spinach anyway. Every "meal app" I'd tried was either a recipe-discovery feed dressed up as a planner, or a calorie tracker that judged you. I wanted a place to store the meals I actually cook, plan a week from them in minutes, and get an accurate shopping list out the other end — nothing more opinionated than that. I also wanted to get hands on experience with technologies that I wasnt getting access to in work.
 
@@ -45,7 +45,7 @@ The "did it make money" question got a real answer only in the last week of this
 
 ---
 
-# 2. Tech stack
+# Tech stack
 
 - **Frontend:** React 18 SPA, React Router for client-side routing, plain React Context for state (no Redux), Tailwind CSS for styling (an earlier pass through Material UI and Bootstrap is still visible as unused dependencies — more on why in section 3), Lucide for icons, Sonner for toasts, `axios` for API calls.
 - **Backend:** Spring Boot 3 (Java 17), REST API, Spring Data JPA over Microsoft SQL Server, Spring Security with JWT access tokens.
@@ -57,7 +57,7 @@ The "did it make money" question got a real answer only in the last week of this
 
 ---
 
-# 3. Things I learned
+# Things I learned
 
 The one underneath all the others: there's a real difference between knowing how a piece of technology works in isolation and actually shipping it as part of one working product, end to end, with real users' data on the other side of it. Tutorials teach you the first. Only finishing something teaches you the second.
 
@@ -105,7 +105,7 @@ The other thing I learned with regards to AI was how to get more use out of it. 
 
 ---
 
-# 4. Where it stopped, and what I'd still like to do
+# Where it stopped, and what I'd still like to do
 
 While the app was a great learning experience there are some learnings that can only happen if the app has users.
 
