@@ -1,22 +1,33 @@
 export function ProfessionalTimeline() {
   const experience = [
     {
-      year: "February 2026-Present",
-      role: "Product Software Engineer",
+      year: "February 2026 - Present",
+      role: "Full Stack Engineer",
       company: "Brightflag",
-      highlights: ["Leverage AI to 3x output", "Developed internal tools to help automate manual processes, saving 5+ hours/week"]
+      highlights: [
+        "Diagnosed and fixed a silent data-loss bug caused by Spring @Transactional/AOP proxy behaviour, JPA optimistic locking, and MySQL isolation edge cases",
+        "Built an internal FreeMarker template testing tool, replacing full invoice test-runs with a live render workbench",
+        "Application Security evangelist; completed 6 SecureFlag certifications (OWASP Top 10, secure coding, supply-chain security)"
+      ]
     },
     {
-      year: "November 2023 - January 2026",
-      role: "Technology Consultant",
+      year: "October 2023 - January 2026",
+      role: "Java Backend Developer",
       company: "Ernst & Young (EY)",
-      highlights: ["Built microservices that processed 3+ million annual transactions", "Scaled system to support 13k+ users"]
+      highlights: [
+        "Improved system performance (500ms → 30ms) using Azure Redis caching and AOP-based logging",
+        "Built Spring Boot microservices processing 3M+ annual transactions across 13k+ users",
+        "Implemented secure API architecture using JWT authentication and RBAC"
+      ]
     },
     {
       year: "September 2018 - June 2023",
       role: "Maths Tutor",
       company: "JustMaths.ie",
-      highlights: ["Broke down complex mathematical concepts for students", "Communicated effectively to improve student performance and confidence"]
+      highlights: [
+        "Broke down complex mathematical concepts for students",
+        "Communicated effectively to improve student performance and confidence"
+      ]
     }
   ];
 
